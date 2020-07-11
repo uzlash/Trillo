@@ -15,21 +15,18 @@
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
     font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%;
 }
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 body {
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif, Helvetica, Arial;
     font-weight: 400;
     line-height: 1.6;

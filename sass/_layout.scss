@@ -8,9 +8,13 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2) solid 1px;
+    display: flex;
+    justify-content: space-between; //align items (center) across the main axis(X)
+    align-items: center; //aligns items (center) along the cross axis(Y)
 }
 
 .content {

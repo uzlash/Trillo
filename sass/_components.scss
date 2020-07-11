@@ -3,23 +3,64 @@
 /////////
 .logo {
     height: 3.5rem;
+    margin-left: 2rem;
 }
 
 ////////////////////////////////////
 /////SEARCH
 ///////////
 .search {
-    &__input {
+    flex: 0 0 40%;//grow 0 shrink 0 basis 40% to occupy 40% of the width
+    display: flex;
+    align-items: center; //aligns item center along cross axis
+    justify-content: center; //justifies content center along the main axis
 
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 10rem;
+        width: 90%;
+        transition: all .5s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-ms-input-placeholder,
+        &::-webkit-input-placeholder {
+            color: var(--color-grey-light-4);
+            font-weight: 100;
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
     }
 
     &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
 
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
 
     &__icon {
         height: 2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 }
 
@@ -27,29 +68,51 @@
 /////USER NAVIGATION
 ////////////////////
 .user-nav {
+    display: flex;
+    align-self: stretch; //individual flex item stretches the entire container
+    align-items: center;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
     &__icon-box {
-        
+        position: relative;
     }
 
     &__icon {  
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: #fff;
+        background-color: var(--color-primary);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
 
-    }
-
-    &__user {
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__user-photo {
         height: 3.75rem;
         border-radius: 50%;
-    }
-
-    &__user-photo {
-
+        margin-right: 1rem;
     }
 }
