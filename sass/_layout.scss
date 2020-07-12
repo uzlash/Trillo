@@ -24,9 +24,14 @@
 .sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%; //flex: grow shrink bases
+    display: flex;
+    flex-direction: column; //switches the direction and now main axis is Y axis, cross axis X
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
     flex: 1; //grow and use all available space
+
+    height: 80rem;
 }
